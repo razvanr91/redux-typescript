@@ -23,6 +23,12 @@ const RepositoriesList: React.FC = () => {
 				<input value={term} onChange={onChange} />
 				<button>Search</button>
 			</form>
+			{error && <h3>{error}</h3>}
+			{loading && <h3>Loading...</h3>}
+			{data &&
+				data.map((name) => {
+					return <h4 key={name}>{name}</h4>;
+				})}
 		</div>
 	);
 };
