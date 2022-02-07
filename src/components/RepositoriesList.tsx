@@ -5,7 +5,7 @@ import { useTypedSelector } from "../hooks/useTypedSelector";
 const RepositoriesList: React.FC = () => {
 	const { searchRepositories } = useActions();
 	const [term, setTerm] = useState("");
-	const { data, error, loading } = useTypedSelector((state: any) => state.repositories);
+	const { data, error, loading } = useTypedSelector((state) => state.repositories);
 
 	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setTerm(e.target.value);
